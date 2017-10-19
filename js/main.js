@@ -15,8 +15,8 @@ function bmiCalulator(foot, inch , weight){
   return 703*(weight/Math.pow(total_inches,2));
 }
 
-function addBmiData(f, i, w, s){
-  var bmiDataItem = {foot: f, inch: i, wight:w, status: s, date: getToday()};
+function addBmiData(h, w, b, s){
+  var bmiDataItem = {height: h, weight: w, bmi:b, status: s, date: getToday()};
   bmiData.push(bmiDataItem);
   displayBmiData(bmiData);
   localStorage.setItem('bmiData', JSON.stringify(bmiData));
@@ -25,7 +25,21 @@ function addBmiData(f, i, w, s){
 function displayBmiData(items){
   var str = '';
   for (var i=0;i<items.length;i++){
-    str += '<li>' + items[i].foot + '</li>';
+    str += '<li>'+
+              '<ul class="bmi-items">'+
+                '<li>'+ items[i].status + '</li>'+
+                '<li>'+
+                  '<span>BMI</span>' + items[i].bmi +
+                '</li>'+
+                '<li>'+
+                  '<span>weight</span>' + items[i].weight +'<span>lbs</span>' +
+                '</li>'+
+                '<li>'+
+                  '<span>height</span>' + items[i].height +'<span>ft</span>' +
+                '</li>'+
+                '<li>' + items[i].date + '</li>'+
+              '</ul>'+
+          '</li>';
   }
   bmiList.innerHTML = str;
 }
@@ -46,25 +60,26 @@ function getBmiData(e){
   var weightInput = parseInt(document.querySelector('.weight').value);
   var footInput = parseInt(document.querySelector('.foot').value);
   var inchInput = parseInt(document.querySelector('.inch').value);
-  var bmiData = bmiCalulator(footInput, inchInput, weightInput).toFixed(2);
+  var footAndInch = document.querySelector('.foot').value + '.'+ document.querySelector('.inch').value
+  var bmiDataOutput = bmiCalulator(footInput, inchInput, weightInput).toFixed(2);
   console.log(bmiData);
   var status = '';
-  if (bmiData >= 40) {
+  if (bmiDataOutput >= 40) {
     status = "overobese";
-  } else if (bmiData >= 30 && bmiData < 40) {
+  } else if (bmiDataOutput >= 30 && bmiDataOutput < 40) {
     status = "obese";
-  } else if (bmiData >= 25 && bmiData < 30) {
+  } else if (bmiDataOutput >= 25 && bmiDataOutput < 30) {
     status = 'overweight';
-  } else if (bmiData >= 18 && bmiData < 25) {
+  } else if (bmiDataOutput >= 18 && bmiDataOutput < 25) {
     status = 'healthy';
   } else {
     status ='underweight';
   }
-  addBmiData(footInput,inchInput,weightInput,status);
+  addBmiData(footAndInch,weightInput,bmiDataOutput,status);
   var str = '<div class="result-block ' + status + '">' +
               '<div class="circle">' +
                 '<img src="../img/icons_loop.png">' +
-                bmiData +
+                bmiDataOutput +
                 '<span>bmi</span>' +
               '</div>' +
               '<div class="result-text">'+ status+'</div>' +

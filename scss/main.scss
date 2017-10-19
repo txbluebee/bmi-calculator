@@ -14,12 +14,11 @@ body {
     padding: 2rem 0;
     display: flex;
     justify-content: center;
-    .col:nth-child(2){
-      margin-left:4rem;
-    }
     .col {
-      img {
+      width: 270px;
+      .bmi-image {
         margin-top: 1rem;
+        margin-left: 4rem;
       }
       label {
         display: block;
@@ -60,9 +59,9 @@ body {
           outline: 0;
         }
       }
-    }
-    .bmi-result {
-      padding-left: 4rem;
+      .bmi-result {
+        margin-left: 2rem;
+      }
     }
   }
 }
@@ -89,7 +88,7 @@ body {
       position: absolute;
       background-color: $light-color;
       border-radius: 100%;
-      top: 55px;
+      top: 70px;
       left: 77px;
       width: 15px;
       height: 15px;
@@ -151,15 +150,45 @@ body {
 }
 
 .content {
+  padding-top: 2.5rem;
   display: flex;
   justify-content: center;
   .bmi-history{
     h2 {
       font-size: 1.5rem;
       text-transform: uppercase;
+      text-align: center;
     }
-    ul {
-      
+    .bmi-list {
+      margin-top: 1.5rem;
+      li {
+        margin-bottom: 1rem;
+        ul{
+          padding: 1rem 2rem;
+          display: flex;
+          justify-content: space-between;
+          background-color: #fff;
+          box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+          li {
+            font-size: 1rem;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            width: 150px;
+            span{
+              font-size: 0.7rem;
+              margin-right: 0.2rem;
+              &:nth-child(2){
+                text-transform: lowercase;
+                font-size: 1.1rem;
+                margin-left: 0.1rem;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
