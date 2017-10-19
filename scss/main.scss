@@ -1,0 +1,151 @@
+@import 'colors';
+@import 'cssreset';
+body {
+  background-color: $light-color;
+  font-family: sans-serif;
+}
+
+.main {
+  max-width: 1024px;
+  margin: 0 auto;
+  .bmi-header {
+    background-color: $main-color;
+    color: $second-color;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    .col:nth-child(2){
+      margin-left:4rem;
+    }
+    .col {
+      img {
+        margin-top: 1rem;
+      }
+      label {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      input {
+        border: 2px solid $second-color;
+        border-radius: 5px;
+        width: 200px;
+        height: 25px;
+        background: #646464;
+        font-size: 1rem;
+        color: white;
+      }
+      .height-group {
+        input {
+          width: 90px;
+        }
+      }
+      .btn-get-bmi{
+        margin-top: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $second-color;
+        color: $main-color;
+        font-weight: bold;
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        border: 1px solid $light-color;
+        text-transform: uppercase;
+        &:hover{
+          border: 3px solid $light-color;
+        }
+        &:focus {
+          background-color: #fc7c32;
+          outline: 0;
+        }
+      }
+    }
+    .bmi-result {
+      padding-left: 4rem;
+    }
+  }
+}
+
+
+.result-block{
+  display: flex;
+  align-items: center;
+  color: $light-color;
+  .circle {
+    margin-top: 1.2rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    border: 5px solid;
+    background-color: $main-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    img {
+      position: absolute;
+      background-color: $light-color;
+      border-radius: 100%;
+      top: 55px;
+      left: 77px;
+      width: 15px;
+      height: 15px;
+      padding: 5px;
+      border: 1.5px solid $main-color;
+    }
+    span {
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin-top: 0.25rem;
+    }
+  }
+  .result-text {
+    margin-left: 0.8rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+}
+
+.overobese{
+  color: $overobese-color;
+  .circle{
+    img {
+      background-color: $overobese-color;
+    }
+  }
+}
+.obese{
+  color: $obese-color ;
+  .circle{
+    img {
+      background-color: $obese-color;
+    }
+  }
+}
+.overweight{
+  color: $overweight-color ;
+  .circle{
+    img {
+      background-color: $overweight-color;
+    }
+  }
+}
+.healthy{
+  color: $healthy-color ;
+  .circle{
+    img {
+      background-color: $healthy-color;
+    }
+  }
+}
+.underweight{
+  color: $underweight-color ;
+  .circle{
+    img {
+      background-color: $underweight-color;
+    }
+  }
+}

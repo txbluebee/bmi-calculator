@@ -1,0 +1,188 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background-color: #E3EFF3;
+  font-family: sans-serif; }
+
+.main {
+  max-width: 1024px;
+  margin: 0 auto; }
+  .main .bmi-header {
+    background-color: #424242;
+    color: #FFD366;
+    padding: 2rem 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .main .bmi-header .col:nth-child(2) {
+      margin-left: 4rem; }
+    .main .bmi-header .col img {
+      margin-top: 1rem; }
+    .main .bmi-header .col label {
+      display: block;
+      margin: 0.5rem 0; }
+    .main .bmi-header .col input {
+      border: 2px solid #FFD366;
+      border-radius: 5px;
+      width: 200px;
+      height: 25px;
+      background: #646464;
+      font-size: 1rem;
+      color: white; }
+    .main .bmi-header .col .height-group input {
+      width: 90px; }
+    .main .bmi-header .col .btn-get-bmi {
+      margin-top: 1.2rem;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      background-color: #FFD366;
+      color: #424242;
+      font-weight: bold;
+      width: 120px;
+      height: 120px;
+      border-radius: 100%;
+      border: 1px solid #E3EFF3;
+      text-transform: uppercase; }
+      .main .bmi-header .col .btn-get-bmi:hover {
+        border: 3px solid #E3EFF3; }
+      .main .bmi-header .col .btn-get-bmi:focus {
+        background-color: #fc7c32;
+        outline: 0; }
+    .main .bmi-header .bmi-result {
+      padding-left: 4rem; }
+
+.result-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #E3EFF3; }
+  .result-block .circle {
+    margin-top: 1.2rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    border: 5px solid;
+    background-color: #424242;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative; }
+    .result-block .circle img {
+      position: absolute;
+      background-color: #E3EFF3;
+      border-radius: 100%;
+      top: 55px;
+      left: 77px;
+      width: 15px;
+      height: 15px;
+      padding: 5px;
+      border: 1.5px solid #424242; }
+    .result-block .circle span {
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin-top: 0.25rem; }
+  .result-block .result-text {
+    margin-left: 0.8rem;
+    font-size: 1.2rem;
+    text-transform: uppercase; }
+
+.overobese {
+  color: #FF1200; }
+  .overobese .circle img {
+    background-color: #FF1200; }
+
+.obese {
+  color: #FF6C03; }
+  .obese .circle img {
+    background-color: #FF6C03; }
+
+.overweight {
+  color: #FF982D; }
+  .overweight .circle img {
+    background-color: #FF982D; }
+
+.healthy {
+  color: #86D73F; }
+  .healthy .circle img {
+    background-color: #86D73F; }
+
+.underweight {
+  color: #31BAF9; }
+  .underweight .circle img {
+    background-color: #31BAF9; }
