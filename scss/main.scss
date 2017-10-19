@@ -164,7 +164,7 @@ body {
     }
   }
   .result-text{
-    background-color: $healthy-color;
+    color: $healthy-color;
   }
   .bmi-items {
     border-left-color: $healthy-color !important;
@@ -178,7 +178,7 @@ body {
     }
   }
   .result-text{
-    background-color: $underweight-color;
+    color: $underweight-color;
   }
   .bmi-items {
     border-left-color: $underweight-color !important;

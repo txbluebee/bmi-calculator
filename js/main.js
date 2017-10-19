@@ -5,13 +5,25 @@ var bmiResult = document.querySelector('.bmi-result');
 // Show BMI history
 var bmiData = JSON.parse(localStorage.getItem('bmiData')) || [];
 var bmiList = document.querySelector('.bmi-list');
-// var deleteIcon = document.querySelector('.bmi-list');
 // console.log(deleteIcon);
+
+
 // listen to Event
 displayBmiData(bmiData);
 getBmi.addEventListener('click', getBmiData);
-bmiList.addEventListener('click', deleteBmiData);
-// Listen to Delete bmi history event;
+bmiList.addEventListener('click', deleteBmiData); // Listen to Delete bmi history event;
+
+
+bmiResult.addEventListener('click', reloadPage);
+
+
+
+function reloadPage(e){
+  e.preventDefault();
+  if (e.target.nodeName !== 'IMG'){return};
+  console.log(e.target.nodeName)
+  location.reload();
+}
 
 
 function bmiCalulator(foot, inch , weight){
@@ -28,8 +40,6 @@ function addBmiData(h, w, b, s){
 
 function deleteBmiData(e){
   e.preventDefault();
-  console.log("delete me");
-  console.log(e.target.nodeName);
   if (e.target.nodeName !== 'IMG'){return};
   var index = e.target.dataset.index;
   bmiData.splice(index, 1);
@@ -87,7 +97,6 @@ function getBmiData(e){
 
   var footAndInch = document.querySelector('.foot').value + "."+ document.querySelector('.inch').value
   var bmiDataOutput = bmiCalulator(footInput, inchInput, weightInput).toFixed(2);
-  console.log(bmiData);
   var status = '';
   if (bmiDataOutput >= 40) {
     status = "overobese";
@@ -103,7 +112,7 @@ function getBmiData(e){
   addBmiData(footAndInch,weightInput,bmiDataOutput,status);
   var str = '<div class="result-block ' + status + '">' +
               '<div class="circle">' +
-                '<img src="./img/icons_loop.png">' +
+                '<a href="#""><img src="./img/icons_loop.png"></a>' +
                 bmiDataOutput +
                 '<span>bmi</span>' +
               '</div>' +

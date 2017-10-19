@@ -208,7 +208,7 @@ body {
     background-color: #86D73F; }
 
 .healthy .result-text {
-  background-color: #86D73F; }
+  color: #86D73F; }
 
 .healthy .bmi-items {
   border-left-color: #86D73F !important; }
@@ -219,7 +219,7 @@ body {
     background-color: #31BAF9; }
 
 .underweight .result-text {
-  background-color: #31BAF9; }
+  color: #31BAF9; }
 
 .underweight .bmi-items {
   border-left-color: #31BAF9 !important; }
