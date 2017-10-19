@@ -125,6 +125,7 @@ body {
     border-radius: 100%;
     font-size: 1.5rem;
     border: 5px solid;
+    color: #E3EFF3;
     background-color: #424242;
     display: -webkit-box;
     display: -webkit-flex;
@@ -163,30 +164,60 @@ body {
     font-size: 1.2rem;
     text-transform: uppercase; }
 
-.overobese {
+.overobese .circle {
   color: #FF1200; }
   .overobese .circle img {
     background-color: #FF1200; }
 
-.obese {
+.overobese .result-text {
+  color: #FF1200; }
+
+.overobese .bmi-items {
+  border-left-color: #FF1200 !important; }
+
+.obese .circle {
   color: #FF6C03; }
   .obese .circle img {
     background-color: #FF6C03; }
 
-.overweight {
+.obese .result-text {
+  color: #FF6C03; }
+
+.obese .bmi-items {
+  border-left-color: #FF6C03 !important; }
+
+.overweight .circle {
   color: #FF982D; }
   .overweight .circle img {
     background-color: #FF982D; }
 
-.healthy {
+.overweight .result-text {
+  color: #FF982D; }
+
+.overweight .bmi-items {
+  border-left-color: #FF982D !important; }
+
+.healthy .circle {
   color: #86D73F; }
   .healthy .circle img {
     background-color: #86D73F; }
 
-.underweight {
+.healthy .result-text {
+  background-color: #86D73F; }
+
+.healthy .bmi-items {
+  border-left-color: #86D73F !important; }
+
+.underweight .circle {
   color: #31BAF9; }
   .underweight .circle img {
     background-color: #31BAF9; }
+
+.underweight .result-text {
+  background-color: #31BAF9; }
+
+.underweight .bmi-items {
+  border-left-color: #31BAF9 !important; }
 
 .content {
   padding-top: 2.5rem;
@@ -204,9 +235,10 @@ body {
     text-align: center; }
   .content .bmi-history .bmi-list {
     margin-top: 1.5rem; }
-    .content .bmi-history .bmi-list li {
+    .content .bmi-history .bmi-list > li {
       margin-bottom: 1rem; }
-      .content .bmi-history .bmi-list li ul {
+      .content .bmi-history .bmi-list > li .bmi-items {
+        border-left: 7px solid;
         padding: 1rem 2rem;
         display: -webkit-box;
         display: -webkit-flex;
@@ -219,9 +251,8 @@ body {
         background-color: #fff;
         -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); }
-        .content .bmi-history .bmi-list li ul li {
+        .content .bmi-history .bmi-list > li .bmi-items li {
           font-size: 1rem;
-          margin: 0;
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
@@ -233,10 +264,10 @@ body {
           text-transform: uppercase;
           font-size: 1.1rem;
           width: 150px; }
-          .content .bmi-history .bmi-list li ul li span {
+          .content .bmi-history .bmi-list > li .bmi-items li span {
             font-size: 0.7rem;
             margin-right: 0.2rem; }
-            .content .bmi-history .bmi-list li ul li span:nth-child(2) {
+            .content .bmi-history .bmi-list > li .bmi-items li span:nth-child(2) {
               text-transform: lowercase;
               font-size: 1.1rem;
               margin-left: 0.1rem; }

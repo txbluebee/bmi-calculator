@@ -78,6 +78,7 @@ body {
     border-radius: 100%;
     font-size: 1.5rem;
     border: 5px solid;
+    color: $light-color;
     background-color: $main-color;
     display: flex;
     flex-direction: column;
@@ -109,43 +110,73 @@ body {
 }
 
 .overobese{
-  color: $overobese-color;
   .circle{
+    color: $overobese-color;
     img {
       background-color: $overobese-color;
     }
   }
+  .result-text{
+    color: $overobese-color
+  }
+  .bmi-items {
+    border-left-color: $overobese-color !important;
+  }
 }
 .obese{
-  color: $obese-color ;
   .circle{
+    color: $obese-color ;
     img {
       background-color: $obese-color;
     }
   }
+  .result-text{
+    color: $obese-color;
+  }
+  .bmi-items {
+    border-left-color: $obese-color !important;
+  }
 }
 .overweight{
-  color: $overweight-color ;
   .circle{
+    color: $overweight-color ;
     img {
       background-color: $overweight-color;
     }
   }
+  .result-text{
+    color: $overweight-color;
+  }
+  .bmi-items {
+    border-left-color: $overweight-color !important;
+  }
 }
 .healthy{
-  color: $healthy-color ;
   .circle{
+    color: $healthy-color ;
     img {
       background-color: $healthy-color;
     }
   }
+  .result-text{
+    background-color: $healthy-color;
+  }
+  .bmi-items {
+    border-left-color: $healthy-color !important;
+  }
 }
 .underweight{
-  color: $underweight-color ;
   .circle{
+    color: $underweight-color ;
     img {
       background-color: $underweight-color;
     }
+  }
+  .result-text{
+    background-color: $underweight-color;
+  }
+  .bmi-items {
+    border-left-color: $underweight-color !important;
   }
 }
 
@@ -161,9 +192,10 @@ body {
     }
     .bmi-list {
       margin-top: 1.5rem;
-      li {
+      >li {
         margin-bottom: 1rem;
-        ul{
+        .bmi-items{
+          border-left: 7px solid;
           padding: 1rem 2rem;
           display: flex;
           justify-content: space-between;
@@ -171,7 +203,6 @@ body {
           box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
           li {
             font-size: 1rem;
-            margin: 0;
             display: flex;
             justify-content: center;
             text-transform: uppercase;

@@ -25,7 +25,7 @@ function addBmiData(h, w, b, s){
 function displayBmiData(items){
   var str = '';
   for (var i=0;i<items.length;i++){
-    str += '<li>'+
+    str += '<li class="'+ items[i].status+'">'+
               '<ul class="bmi-items">'+
                 '<li>'+ items[i].status + '</li>'+
                 '<li>'+
