@@ -43,7 +43,9 @@ table {
 
 body {
   background-color: #E3EFF3;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  height: 100%;
+  padding-bottom: 50px; }
 
 .main {
   max-width: 1024px;
@@ -278,9 +280,8 @@ body {
 
 .footer {
   position: fixed;
-  width: 100%;
+  width: 1024px;
   bottom: 0;
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

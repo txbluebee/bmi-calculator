@@ -3,6 +3,8 @@
 body {
   background-color: $light-color;
   font-family: sans-serif;
+  height: 100%;
+  padding-bottom: 50px;
 }
 
 .main {
@@ -230,9 +232,8 @@ body {
 
 .footer {
   position: fixed;
-  width: 100%;
+  width: 1024px;
   bottom: 0;
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;

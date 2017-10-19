@@ -72,10 +72,19 @@ function getToday(){
   return today;
 }
 
+
+
 function getBmiData(e){
   var weightInput = parseInt(document.querySelector('.weight').value);
   var footInput = parseInt(document.querySelector('.foot').value);
   var inchInput = parseInt(document.querySelector('.inch').value);
+
+  if (isNaN(weightInput) || isNaN(footInput) || isNaN(inchInput)){
+    alert('Please enter valid numbers!');
+    location.reload();
+    return;  
+  }
+
   var footAndInch = document.querySelector('.foot').value + "."+ document.querySelector('.inch').value
   var bmiDataOutput = bmiCalulator(footInput, inchInput, weightInput).toFixed(2);
   console.log(bmiData);
