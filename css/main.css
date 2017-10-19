@@ -107,6 +107,9 @@ body {
           outline: 0; }
       .main .bmi-header .col .bmi-result {
         margin-left: 2rem; }
+      .main .bmi-header .col .warningText {
+        height: 15px;
+        margin-top: 8px; }
 
 .result-block {
   display: -webkit-box;
@@ -220,7 +223,7 @@ body {
   border-left-color: #31BAF9 !important; }
 
 .content {
-  padding: 2.5rem 0;
+  padding-top: 2.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -274,6 +277,10 @@ body {
               margin-left: 0.1rem; }
 
 .footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -286,7 +293,7 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 60px;
+  height: 50px;
   font-weight: bold;
   background-color: #FFD366; }
 

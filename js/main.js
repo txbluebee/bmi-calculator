@@ -60,6 +60,7 @@ function displayBmiData(items){
   bmiList.innerHTML = str;
 }
 
+//Create today's date
 function getToday(){
   var today = new Date();
   var dd = today.getDate();
@@ -71,12 +72,11 @@ function getToday(){
   return today;
 }
 
-
 function getBmiData(e){
   var weightInput = parseInt(document.querySelector('.weight').value);
   var footInput = parseInt(document.querySelector('.foot').value);
   var inchInput = parseInt(document.querySelector('.inch').value);
-  var footAndInch = document.querySelector('.foot').value + '.'+ document.querySelector('.inch').value
+  var footAndInch = document.querySelector('.foot').value + "."+ document.querySelector('.inch').value
   var bmiDataOutput = bmiCalulator(footInput, inchInput, weightInput).toFixed(2);
   console.log(bmiData);
   var status = '';
