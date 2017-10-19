@@ -41,7 +41,7 @@ function displayBmiData(items){
   var str = '';
   for (var i=0;i<items.length;i++){
     str += '<li class="'+ items[i].status+'">'+
-              '<a href="#" class="deleteData data-index='+ i +'"><img src="./../img/circle_close.png"></a>'+
+              '<a href="#" class="deleteData data-index='+ i +'"><img src="./img/circle_close.png"></a>'+
               '<ul class="bmi-items">'+
                 '<li>'+ items[i].status + '</li>'+
                 '<li>'+
@@ -82,7 +82,7 @@ function getBmiData(e){
   if (isNaN(weightInput) || isNaN(footInput) || isNaN(inchInput)){
     alert('Please enter valid numbers!');
     location.reload();
-    return;  
+    return;
   }
 
   var footAndInch = document.querySelector('.foot').value + "."+ document.querySelector('.inch').value
@@ -103,7 +103,7 @@ function getBmiData(e){
   addBmiData(footAndInch,weightInput,bmiDataOutput,status);
   var str = '<div class="result-block ' + status + '">' +
               '<div class="circle">' +
-                '<img src="../img/icons_loop.png">' +
+                '<img src="./img/icons_loop.png">' +
                 bmiDataOutput +
                 '<span>bmi</span>' +
               '</div>' +
