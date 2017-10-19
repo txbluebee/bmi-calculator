@@ -5,10 +5,14 @@ var bmiResult = document.querySelector('.bmi-result');
 // Show BMI history
 var bmiData = JSON.parse(localStorage.getItem('bmiData')) || [];
 var bmiList = document.querySelector('.bmi-list');
-
+// var deleteIcon = document.querySelector('.bmi-list');
+// console.log(deleteIcon);
 // listen to Event
 displayBmiData(bmiData);
 getBmi.addEventListener('click', getBmiData);
+bmiList.addEventListener('click', deleteBmiData);
+// Listen to Delete bmi history event;
+
 
 function bmiCalulator(foot, inch , weight){
   var total_inches = foot*12 + inch;
@@ -22,10 +26,22 @@ function addBmiData(h, w, b, s){
   localStorage.setItem('bmiData', JSON.stringify(bmiData));
 }
 
+function deleteBmiData(e){
+  e.preventDefault();
+  console.log("delete me");
+  console.log(e.target.nodeName);
+  if (e.target.nodeName !== 'IMG'){return};
+  var index = e.target.dataset.index;
+  bmiData.splice(index, 1);
+  displayBmiData(bmiData);
+  localStorage.setItem('bmiData', JSON.stringify(bmiData));
+}
+
 function displayBmiData(items){
   var str = '';
   for (var i=0;i<items.length;i++){
     str += '<li class="'+ items[i].status+'">'+
+              '<a href="#" class="deleteData data-index='+ i +'"><img src="./../img/circle_close.png"></a>'+
               '<ul class="bmi-items">'+
                 '<li>'+ items[i].status + '</li>'+
                 '<li>'+
