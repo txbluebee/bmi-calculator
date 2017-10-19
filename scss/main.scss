@@ -149,3 +149,17 @@ body {
     }
   }
 }
+
+.content {
+  display: flex;
+  justify-content: center;
+  .bmi-history{
+    h2 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+    ul {
+      
+    }
+  }
+}

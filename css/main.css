@@ -186,3 +186,16 @@ body {
   color: #31BAF9; }
   .underweight .circle img {
     background-color: #31BAF9; }
+
+.content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .content .bmi-history h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase; }
